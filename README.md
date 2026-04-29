@@ -1,6 +1,6 @@
 # CPDS Template Builder
 
-A React + TypeScript application for building dynamic table export templates, matching the Central Purchase Data System (CPDS) design.
+A React + TypeScript application for building dynamic table export templates.
 
 ## Tech Stack
 
@@ -19,24 +19,24 @@ A React + TypeScript application for building dynamic table export templates, ma
 ```
 src/
 ├── components/
-│   ├── Sidebar.tsx          # Left navigation sidebar
-│   ├── ColumnLibrary.tsx    # Draggable column library panel
-│   ├── BuilderCanvas.tsx    # Sortable column drop zone
-│   ├── TablePreview.tsx     # TanStack Table live preview
-│   └── ColumnSettings.tsx   # Right panel column settings
+│   ├── Sidebar.tsx         
+│   ├── ColumnLibrary.tsx    
+│   ├── BuilderCanvas.tsx    
+│   ├── TablePreview.tsx    
+│   └── ColumnSettings.tsx   
 ├── pages/
-│   ├── TemplateListPage.tsx # Template list / management
-│   └── BuilderPage.tsx      # Full 3-panel builder with DnD context
+│   ├── TemplateListPage.tsx
+│   └── BuilderPage.tsx    
 ├── store/
-│   └── templateStore.ts     # Zustand state management
+│   └── templateStore.ts    
 ├── data/
-│   └── columnLibrary.ts     # All 14 column group definitions
+│   └── columnLibrary.ts    
 ├── utils/
-│   ├── mockData.ts          # Mock data generator
-│   ├── exportUtils.ts       # JPEG / PDF / XLSX export
-│   └── storage.ts           # localStorage helpers
+│   ├── mockData.ts          
+│   ├── exportUtils.ts    
+│   └── storage.ts          
 ├── types/
-│   └── index.ts             # Shared TypeScript types
+│   └── index.ts           
 ├── App.tsx
 ├── main.tsx
 └── index.css
