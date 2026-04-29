@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  /* Lock html/body to viewport — critical for side-panel scroll isolation */
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  #root {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  /* Scrollbars */
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+  /* Preview tables */
+  .preview-table {
+    border-collapse: collapse;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    white-space: nowrap;
+    width: 100%;
+  }
+  .preview-table th {
+    background: #1a2b4a;
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid rgba(255,255,255,0.12);
+    font-weight: 600;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+  }
+  .preview-table th.sub-header {
+    background: #2d3e5e;
+    font-weight: 500;
+  }
+  .preview-table td {
+    padding: 4px 10px;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+    font-size: 11px;
+  }
+  .preview-table td.text-col {
+    text-align: center;
+    font-weight: 700;
+    color: #1a2b4a;
+    background: #f8fafc;
+  }
+  .preview-table tr:nth-child(even) td:not(.text-col) { background: #f8fafc; }
+  .preview-table tr:hover td { background: #f0f4fa !important; }
+  .preview-table td.highlight {
+    background: #fef9c3 !important;
+    color: #92400e;
+    font-weight: 600;
+  }
+  .preview-table tr.total-row td {
+    background: #e8edf5 !important;
+    font-weight: 700;
+    color: #1a2b4a;
+    border-top: 2px solid #1a2b4a;
+  }
+  .preview-table td.formula-cell {
+    background: #ecfdf5 !important;
+    color: #065f46;
+    font-style: italic;
+  }
+  .preview-table td.formula-cell::after {
+    content: ' ƒ';
+    font-size: 9px;
+    opacity: 0.5;
+    font-style: normal;
+  }
+}
